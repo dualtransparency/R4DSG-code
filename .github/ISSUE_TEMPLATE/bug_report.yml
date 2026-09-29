@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible software issue using synthetic input
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach credentials, participant media, benchmark QA, or private logs. Use synthetic examples."
+  - type: input
+    id: version
+    attributes:
+      label: Commit or package version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include Python version, command, and small synthetic input.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true

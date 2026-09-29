@@ -1,0 +1,10 @@
+{
+  "window_seconds": 20,
+  "max_track_gap": 30,
+  "match_distance": 1.5,
+  "size_tolerance": 0.5,
+  "ambiguity_margin": 0.05,
+  "static_motion": 0.1,
+  "anchor_distance": 2,
+  "stable_observations": 2
+}

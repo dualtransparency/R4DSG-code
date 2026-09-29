@@ -1,0 +1,27 @@
+name: CPU tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e '.[dev]'
+      - run: python -m pytest -q
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: python -m build
+      - run: python -m pip install --force-reinstall --no-deps dist/*.whl
+      - run: r4dsg build --frames examples/frames.json --config examples/config.json --output outputs/memory.json
+      - run: r4dsg retrieve --memory outputs/memory.json --questions examples/questions.json --output outputs/retrieval.json

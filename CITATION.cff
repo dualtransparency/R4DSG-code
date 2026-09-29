@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "Please cite the R4DSG paper when using this reference implementation."
+title: "R4DSG: Relative 4D Scene Graph Memory for Object-Centric Question Answering in Long Egocentric Video"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Ma
+    given-names: Ke
+  - family-names: Mao
+    given-names: Yamin
+  - family-names: Li
+    given-names: Weiming
+  - family-names: Tan
+    given-names: Shuai
+  - family-names: Zhong
+    given-names: Yijie
+  - family-names: Chen
+    given-names: Hao
+  - family-names: Wang
+    given-names: Haofen
+  - family-names: Wang
+    given-names: Meng
+url: "https://dualtransparency.github.io/R4DSG/"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "R4DSG: Relative 4D Scene Graph Memory for Object-Centric Question Answering in Long Egocentric Video"
+  authors:
+    - family-names: Ma
+      given-names: Ke
+    - family-names: Mao
+      given-names: Yamin
+    - family-names: Li
+      given-names: Weiming
+    - family-names: Tan
+      given-names: Shuai
+    - family-names: Zhong
+      given-names: Yijie
+    - family-names: Chen
+      given-names: Hao
+    - family-names: Wang
+      given-names: Haofen
+    - family-names: Wang
+      given-names: Meng
+  year: 2026
+  doi: "10.1145/3767308.3835995"
+  url: "https://arxiv.org/abs/2608.11017"
+  collection-title: "Proceedings of the 34th ACM International Conference on Multimedia"
