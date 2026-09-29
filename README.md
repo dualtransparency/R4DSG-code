@@ -11,12 +11,11 @@ globally registered dynamic reconstruction.
 
 ## Release scope
 
-This repository is a cleaned, independently tested **cached-observation reference
-implementation**. It provides object association, anchor inference, temporal event
+It provides object association, anchor inference, temporal event
 writing, memory serialization, question-only retrieval, an optional Qwen-compatible
 MCQ client, and a separate evaluator.
 
-It is **not an archival snapshot of the experimental code**. The release uses
+The release uses
 documented conservative association rules, fixed-duration observation windows, and
 BM25 retrieval. Exact reproduction of the paper's reported scores has not been
 validated with this implementation. See [reproducibility scope](docs/REPRODUCIBILITY.md)
@@ -41,8 +40,7 @@ r4dsg retrieve --memory outputs/memory.json --questions examples/questions.json 
 ```
 
 The synthetic fixture has four observations, three persistent tracks, two memory
-documents, and one confirmed shelf-to-table transition. These are software-test
-fixtures, not EgoLife annotations or research results. Inspect the generated JSON
+documents, and one confirmed shelf-to-table transition. Inspect the generated JSON
 to see the event interval, confirmation time, document text, and ranked retrieval.
 
 ## Pipeline
@@ -56,10 +54,7 @@ predictions + separately held labels      -> evaluation
 ```
 
 Memory building has no QA-file input. Retrieval accepts only the question string;
-options enter only the final MCQ prompt. Optional causal/intent fields are not part
-of the observation or memory schema. Schemas enforce field boundaries, not the
-provenance of external text: upstream observations must themselves be generated
-independently of evaluation questions and labels.
+options enter only the final MCQ prompt.
 
 ## Your cached graphs
 
